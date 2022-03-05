@@ -27,7 +27,7 @@ partnerRouter.route('/')
     res.end('PUT operation not supported on /partners');
 })
 .delete((req, res, next) => {
-    partner.deleteMany()
+    Partner.deleteMany()
     .then(response => {
         res.statusCode = 200;
         res.setHeader('Content-Type', 'application/json');
